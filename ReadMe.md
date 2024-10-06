@@ -1,4 +1,35 @@
-## **1. Instalación del .NET SDK en Ubuntu**
+## **Instalación de Docker en Ubuntu**
+
+1. **Actualiza la lista de paquetes:**
+
+   sudo apt update
+
+2. **Instalar los paquetes necesarios para que apt pueda usar repositorios sobre HTTPS:** 
+
+   sudo apt install apt-transport-https ca-certificates curl software-properties-common
+
+3. **Añadir la clave GPG oficial de docker**
+
+   curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+4. **Añade el repositorio de docker a apt**
+
+   echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+5. **Actualizar la lista de paquetes**
+
+   sudo apt update
+
+6. **Instalar Docker**
+
+   sudo apt install docker-ce
+
+7. **Verificar que docker esté corriendo:**
+   
+   sudo systemctl status docker
+
+
+## **2. Instalación del .NET SDK en Ubuntu**
 
 1. **Actualiza la lista de paquetes**:
 
