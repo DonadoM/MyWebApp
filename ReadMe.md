@@ -56,7 +56,7 @@
 A continuación, necesitarás un archivo, usa nano para crear `Dockerfile` para que le indique a Docker cómo construir tu aplicación. Crea este archivo en la raíz de tu proyecto (`~/MyWebApp`) y añade el siguiente contenido:
 
 ```
-dockerfile
+
 # Etapa de construcción
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
